@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class SecondLargest{
 	public static void main(String[] args) {
-		int j,k,max,a;
+		int i,j,max,a,temp;
 		a=0;
 		int list[] = new int[10];
 		Scanner sc = new Scanner(System.in);
@@ -9,18 +9,14 @@ class SecondLargest{
 			int n=sc.nextInt();
 			list[j]=n;
 		}
-		 for(int k=0;k<list.length-1;k++){
-   for(i=0;i<9;i++) {
+		 for(int k=0;k<=9;k++){
+   for(i=0;i<=8;i++) {
      if (list[i] > list[i+1]){
 	   temp= list[i+1];
 	   list[i+1]=list[i];
 	   list[i]=temp;
 	 }
-   }
-      a=list[8];
-	  System.out.println("second largest no. is" +a );
-   
-				
-			}
-			
-		}
+   }			
+			} System.out.println("second largest no. is " +list[8]);
+	}
+}
