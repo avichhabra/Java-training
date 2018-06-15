@@ -3,6 +3,7 @@ class SecondLargest{
 	public static void main(String[] args) {
 		int i,j,max,a,temp;
 		a=0;
+		System.out.println("Enter 10 elements of array");
 		int list[] = new int[10];
 		Scanner sc = new Scanner(System.in);
 		for(j=0;j<10;j++) {
