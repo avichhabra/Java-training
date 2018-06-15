@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 class Armstrong{
  public static void main(String[] args){
@@ -18,7 +19,8 @@ class Armstrong{
 	   System.out.println(num2+" is armstrong");
    }
 	else 
-	{System.out.println(num2+" is not armstrong");
+	{
+		System.out.println(num2+" is not armstrong");
 	}
  }
 }

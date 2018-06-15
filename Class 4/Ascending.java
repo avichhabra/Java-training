@@ -1,6 +1,6 @@
 class Ascending{
  public static void main(String[] args){
-   int list[] = {5,8,3,9,2,7};
+   int list[] = {5,8,3,9,2,1};
    int i,temp=0;
    for(int k=0;k<list.length-1;k++){
    for(i=0;i<5;i++) {
@@ -13,7 +13,7 @@ class Ascending{
    
  }
  for(int j=0; j<list.length;j++){
-	   System.out.println(list[j]);
+	   if()
 	   
    }
  }
