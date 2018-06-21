@@ -13,7 +13,7 @@ class Write {
 	  
 	  
 	  while((b=bis.read()) != -1) {
-		  bos.write((char)b);
+		  bos.write(b);
 		  System.out.print((char) b);
 	  }
 	  
