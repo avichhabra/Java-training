@@ -86,7 +86,7 @@ import java.util.*;
 	year.put(2015,"two thousand fifteen");
 	
 	//taking year as key from user
-	System.out.println("Enter the year");
+	System.out.println("Enter the year between 2000 to 2015");
 	Scanner sc2 = new Scanner(System.in);
 	int z = sc2.nextInt();
     String y = year.get(z);
