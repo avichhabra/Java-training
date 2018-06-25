@@ -17,7 +17,7 @@ class Extra {
 			}
 			
 	public static void main(String[] args) throws IOException {
-		File f1 = new File("C:/Users/Ossn/Desktop/abc.txt");
+		File f1 = new File("C:/Users/Ossn/Desktop/abc.csv");
 		f1.createNewFile();
 		File f = new File("C:/Users/Ossn/Desktop/Training");
 		if(f.isDirectory()){
