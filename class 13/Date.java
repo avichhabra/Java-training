@@ -62,8 +62,8 @@ import java.util.*;
 
     // taking month as a key  from the user	
 	System.out.println("Enter the month");
-	Scanner sc1 = new Scanner(System.in);
-	int d = sc1.nextInt();
+	//Scanner sc1 = new Scanner(System.in);
+	int d = sc.nextInt();
     String m = month.get(d);
 	
 	
@@ -87,8 +87,8 @@ import java.util.*;
 	
 	//taking year as key from user
 	System.out.println("Enter the year between 2000 to 2015");
-	Scanner sc2 = new Scanner(System.in);
-	int z = sc2.nextInt();
+	//Scanner sc2 = new Scanner(System.in);
+	int z = sc.nextInt();
     String y = year.get(z);
 	
 	//printing the whole date in english
