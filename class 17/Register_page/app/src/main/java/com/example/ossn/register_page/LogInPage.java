@@ -21,10 +21,8 @@ public class LogInPage extends AppCompatActivity {
         loginPass = (EditText) findViewById(R.id.editText4);
 
 
-        Bundle d = getIntent().getExtras();
-        regName = d.getString("name");
-        regPass = d.getString("password");
-        Toast.makeText(LogInPage.this, regName + " " + regPass, Toast.LENGTH_SHORT).show();
+
+        //Toast.makeText(LogInPage.this, regName + " " + regPass, Toast.LENGTH_SHORT).show();
 
         logName = loginName.getText().toString();
         logPass = loginPass.getText().toString();
@@ -32,9 +30,20 @@ public class LogInPage extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle d = getIntent().getExtras();
+                regName = d.getString("name");
+                regPass = d.getString("password");
+
+                logName = loginName.getText().toString();
+                logPass = loginPass.getText().toString();
+
                 if (logName.equals(regName) && logPass.equals(regPass)) {
-                    Toast.makeText(getApplicationContext(), "success", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), " login success", Toast.LENGTH_SHORT).show();
                 }
+                else {
+                    Toast.makeText(getApplicationContext(), "username or password mismatch", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
     }
