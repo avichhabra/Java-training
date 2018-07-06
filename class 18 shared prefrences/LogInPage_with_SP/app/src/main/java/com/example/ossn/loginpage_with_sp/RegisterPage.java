@@ -24,21 +24,26 @@ public class RegisterPage extends AppCompatActivity {
         b1=(Button)findViewById(R.id.button);
         b2=(Button)findViewById(R.id.button2);
 
-        sp = getSharedPreferences("prefer", MODE_PRIVATE);
-        SharedPreferences.Editor edit = sp.edit();
 
-        Name = et1.getText().toString();
-        Email = et2.getText().toString();
-        Pass = et3.getText().toString();
 
-        edit.putString("regName",Name);
-        edit.putString("regEmail",Email);
-        edit.putString("regPassword",Pass);
 
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                sp = getSharedPreferences("prefer", MODE_PRIVATE);
+                SharedPreferences.Editor edit = sp.edit();
+
+
+                Name = et1.getText().toString();
+                Email = et2.getText().toString();
+                Pass = et3.getText().toString();
+
+                edit.putString("regName",Name);
+                edit.putString("regEmail",Email);
+                edit.putString("regPassword",Pass);
+                edit.commit();
 
                 Intent i = new Intent(getApplicationContext(),LogInPage.class);
                 startActivity(i);

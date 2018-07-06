@@ -23,10 +23,9 @@ public class LogInPage extends AppCompatActivity {
         e1=(EditText)findViewById(R.id.editText6);
         e2=(EditText)findViewById(R.id.editText7);
 
-
-
-
         login=(Button)findViewById(R.id.button6);
+
+
 
         //sp1 = getSharedPreferences("log_pref", MODE_PRIVATE);
         //SharedPreferences.Editor edit = sp1.edit();
@@ -34,17 +33,22 @@ public class LogInPage extends AppCompatActivity {
         //edit.putString("final_name",regName);
         //edit.putString("final_email",regEmail);
 
-        sp=getSharedPreferences("prefer", MODE_PRIVATE);
-        regName=sp.getString("regName","");
-        regPass=sp.getString("regPassword","");
-        regEmail=sp.getString("regEmail","");
 
-        logName = e1.getText().toString();
-        logPass = e2.getText().toString();
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                sp=getSharedPreferences("prefer", MODE_PRIVATE);
+
+
+                regName=sp.getString("regName","");
+                regPass=sp.getString("regPassword","");
+                regEmail=sp.getString("regEmail","");
+
+                logName = e1.getText().toString();
+                logPass = e2.getText().toString();
 
 
                 if(logName.equals(regName) && logPass.equals(regPass)) {
